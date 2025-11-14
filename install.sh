@@ -2,6 +2,11 @@
 sudo apt update && sudo apt install -y build-essential git meson ninja-build autoconf automake libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxkbcommon-x11-dev libxcb-xinerama0-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm-dev libxcb-shape0-dev pkg-config libxcb-xfixes0-dev libxcb-xinerama0-dev libxcb-xkb-dev xutils-dev libtool && \
 cd /tmp && git clone https://github.com/Airblader/i3 i3-gaps && cd i3-gaps && mkdir -p build && cd build && meson .. && ninja && sudo ninja install
 
+# instalar y configurar polybar
+sudo apt install polybar
+mkdir ~/.config/polybar
+cp /etc/polybar/config.ini ~/.config/polybar/
+
 # instalar gh-cli
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
 	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
