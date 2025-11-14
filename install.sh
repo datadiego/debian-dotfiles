@@ -20,3 +20,5 @@ cp /etc/polybar/config.ini ~/.config/polybar/
 
 mkdir ~/.config/i3
 mkdir~/.config/alacritty
+
+./install-dotfiles.sh
