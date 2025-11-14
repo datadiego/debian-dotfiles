@@ -50,6 +50,7 @@ mkdir -p ~/.config/i3
 mkdir -p ~/.config/alacritty
 
 cp "$SCRIPT_DIR/dotfiles/i3" ~/.config/i3/config
+cp "$SCRIPT_DIR/dotfiles/keybindings.conf" ~/.config/i3/keybindings.conf
 cp "$SCRIPT_DIR/dotfiles/polybar-config.ini" ~/.config/polybar/config.ini
 cp "$SCRIPT_DIR/dotfiles/alacritty.toml" ~/.config/alacritty/alacritty.toml
 cp "$SCRIPT_DIR/dotfiles/new_terminal.sh" ~/.config/i3/new_terminal.sh
