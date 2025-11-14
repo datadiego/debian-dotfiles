@@ -1,3 +1,5 @@
+include ~/.config/i3/keybindings.conf
+
 set $mod Mod4
 
 font pango:monospace 8
@@ -58,15 +60,6 @@ bindsym $mod+f fullscreen toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -136,11 +129,3 @@ exec --no-startup-id polybar example &
 gaps inner 2
 gaps outer 2
 
-# Definir bordes
-new_window  pixel 1
-new_float   pixel 1
-
-client.focused          #4c7899 #285577 #ffffff #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
