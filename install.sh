@@ -3,7 +3,7 @@ sudo apt update && sudo apt install -y build-essential xdotool git meson ninja-b
 cd /tmp && git clone https://github.com/Airblader/i3 i3-gaps && cd i3-gaps && mkdir -p build && cd build && meson .. && ninja && sudo ninja install
 
 # instalar y configurar polybar
-sudo apt install polybar
+sudo apt install polybar -y
 mkdir ~/.config/polybar
 cp /etc/polybar/config.ini ~/.config/polybar/
 
@@ -19,6 +19,10 @@ cp /etc/polybar/config.ini ~/.config/polybar/
 	&& sudo apt install gh -y
 
 mkdir ~/.config/i3
-mkdir~/.config/alacritty
+mkdir ~/.config/alacritty
 
-./install-dotfiles.sh
+cp ./dotfiles/i3 ~/.config/i3/config
+cp ./dotfiles/polybar-config.ini ~/.config/polybar/config.ini
+cp ./dotfiles/alacritty.toml ~/.config/alacritty/alacritty.toml
+cp ./dotfiles/new_terminal.sh ~/.config/i3/new_terminal.sh
+
