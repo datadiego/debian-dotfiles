@@ -1,5 +1,8 @@
 include ~/.config/i3/keybindings.conf
 
+exec --no-startup-id killall ibus-daemon
+exec --no-startup-id killall ibus-x11
+exec --no-startup-id setxkbmap -layout es -variant nodeadkeys
 exec --no-startup-id picom -b
 
 set $terminal ~/.config/i3/terminal-preserving-working-directory.sh /usr/bin/alacritty

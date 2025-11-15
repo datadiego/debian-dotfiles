@@ -55,3 +55,6 @@ mkdir ~/.config/oh-my-posh
 # configuracion de variables de git
 git config --global user.name "$git_name"
 git config --global user.email "$git_email"
+
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'es+nodeadkeys')]"
+gsettings set org.gnome.desktop.input-sources current 0
