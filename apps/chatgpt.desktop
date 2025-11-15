@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ChatGPT
+Exec=/snap/bin/chromium --app=https://chat.openai.com
+Icon=chatgpt
+Terminal=false
