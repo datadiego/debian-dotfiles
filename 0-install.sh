@@ -38,14 +38,16 @@ unzip JetBrainsMono.zip -d ~/.local/share/fonts
 fc-cache -f -v
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
+# instalar fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
+
+# directorios para configuraciones
 mkdir ~/.config/i3
 mkdir ~/.config/polybar
 mkdir ~/.config/alacritty
 mkdir ~/.config/oh-my-posh
 
+# configuracion de variables de git
 git config --global user.name "$git_name"
 git config --global user.email "$git_email"
-
-echo "Git ha sido configurado con:"
-echo "  Nombre: $git_name"
-echo "  Email:  $git_email"
