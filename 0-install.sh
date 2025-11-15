@@ -5,7 +5,6 @@ cd /tmp && git clone https://github.com/Airblader/i3 i3-gaps && cd i3-gaps && mk
 # instalar y configurar polybar
 sudo apt install polybar -y
 
-
 # instalar gh-cli
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
 	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
@@ -17,7 +16,12 @@ sudo apt install polybar -y
 	&& sudo apt update \
 	&& sudo apt install gh -y
 
+# instalar alacritty, fuentes y oh-my-posh
+sudo apt install -y alacritty
 sudo apt install fonts-firacode
+wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+unzip JetBrainsMono.zip -d ~/.local/share/fonts
+fc-cache -f -v
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
 mkdir ~/.config/i3

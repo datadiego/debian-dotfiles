@@ -1,0 +1,9 @@
+integrar aplicaciones .desktop
+
+integrar bitwarden con chromium:
+
+{
+  "ExtensionInstallForcelist": [
+    "nngceckbapebfimnlniiiahkandclblb"
+  ]
+}
