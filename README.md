@@ -2,6 +2,8 @@
 
 Este script instala varias herramientas básicas para mejorar la productividad en sistemas debian/ubuntu
 
+![](imgs/screenshot.png)
+
 ## Instalación
 
 Desde una terminal ejecuta:
