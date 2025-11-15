@@ -23,6 +23,17 @@ Se te preguntará tu nombre y dirección de correo para configurar git con esos 
 - **eza**: Reemplazo de ls.
 - **oh-my-posh**: Customizacion de prompt y terminal.
 
+# Keybindings
+
+- **Super + enter**: Nueva terminal
+- **Super + d**: Menu de aplicaciones
+- **Super + v**: Apilar en modo vertical
+- **Super + h**: Apilar en modo horizontal
+- **Super + r**: Modo resize
+- **Super + b**: Navegador
+- **Super + a**: ChatGPT
+- **Super + p**: Screenshot
+
 ## Herramientas
 
 - git

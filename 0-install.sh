@@ -27,6 +27,9 @@ sudo apt install polybar -y
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
+# intalar scrot para screenshots
+sudo apt install scrot -y
+
 # instalar alacritty, fuentes y oh-my-posh
 sudo apt install -y alacritty
 sudo apt install fonts-firacode
