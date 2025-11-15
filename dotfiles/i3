@@ -1,5 +1,6 @@
 include ~/.config/i3/keybindings.conf
 
+set $terminal ~/.config/i3/terminal-preserving-working-directory.sh /usr/bin/alacritty
 set $mod Mod4
 
 font pango:monospace 8
@@ -24,7 +25,10 @@ tiling_drag modifier titlebar
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec ~/.config/i3/new_terminal.sh
+#bindsym $mod+Return exec /usr/bin/alacritty
+#bindsym $mod+Return exec ~/.config/i3/new_terminal.sh
+bindsym $mod+Return exec --no-startup-id $terminal
+
 # kill focused window
 bindsym $mod+w kill
 

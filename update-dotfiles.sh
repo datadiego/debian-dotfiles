@@ -1,5 +1,5 @@
 cp ~/.config/i3/config ./dotfiles/i3
-cp ~/.config/i3/new_terminal.sh ./dotfiles/new_terminal.sh
+#cp ~/.config/i3/new_terminal.sh ./dotfiles/new_terminal.sh
 cp ~/.config/i3/keybindings.conf ./dotfiles/keybindings.conf
 
 cp ~/.config/alacritty/alacritty.toml ./dotfiles/alacritty.toml
