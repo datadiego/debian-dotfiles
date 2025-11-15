@@ -23,3 +23,4 @@ curl -s https://ohmyposh.dev/install.sh | bash -s
 mkdir ~/.config/i3
 mkdir ~/.config/polybar
 mkdir ~/.config/alacritty
+mkdir ~/.config/oh-my-posh
