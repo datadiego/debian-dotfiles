@@ -1,5 +1,7 @@
 include ~/.config/i3/keybindings.conf
 
+exec --no-startup-id picom -b
+
 set $terminal ~/.config/i3/terminal-preserving-working-directory.sh /usr/bin/alacritty
 set $mod Mod4
 
