@@ -4,8 +4,7 @@ cd /tmp && git clone https://github.com/Airblader/i3 i3-gaps && cd i3-gaps && mk
 
 # instalar y configurar polybar
 sudo apt install polybar -y
-mkdir ~/.config/polybar
-cp /etc/polybar/config.ini ~/.config/polybar/
+
 
 # instalar gh-cli
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
@@ -18,11 +17,10 @@ cp /etc/polybar/config.ini ~/.config/polybar/
 	&& sudo apt update \
 	&& sudo apt install gh -y
 
+sudo apt install fonts-firacode
+curl -s https://ohmyposh.dev/install.sh | bash -s
+
+
 mkdir ~/.config/i3
+mkdir ~/.config/polybar
 mkdir ~/.config/alacritty
-
-cp ./dotfiles/i3 ~/.config/i3/config
-cp ./dotfiles/polybar-config.ini ~/.config/polybar/config.ini
-cp ./dotfiles/alacritty.toml ~/.config/alacritty/alacritty.toml
-cp ./dotfiles/new_terminal.sh ~/.config/i3/new_terminal.sh
-
