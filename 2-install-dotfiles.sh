@@ -1,5 +1,4 @@
 cp ./dotfiles/i3 ~/.config/i3/config
-#cp ./dotfiles/new_terminal.sh ~/.config/i3/new_terminal.sh
 cp ./dotfiles/terminal-preserving-working-directory.sh ~/.config/i3/terminal-preserving-working-directory.sh
 cp ./dotfiles/keybindings.conf ~/.config/i3/keybindings.conf
 

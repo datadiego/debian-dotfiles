@@ -16,7 +16,7 @@ cp dotfiles/code.settings.json ~/.config/Code/User/settings.json
 
 # Instalación de paquetes para Debian/Ubuntu
 sudo apt update
-sudo apt install -y chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit
+sudo apt install -y chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit tree 
 
 # Instalar paquetes npm globalmente
 sudo npm i -g opencode-ai@latest live-server
