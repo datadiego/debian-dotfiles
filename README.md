@@ -38,17 +38,34 @@ Se te preguntará tu nombre y dirección de correo para configurar git con esos 
 
 ## Herramientas
 
-- git
-- gh-cli
-- lazygit
-- sqlite3
-- VSCode
-- Chromium
-- opencode
-- ChatGPT (PWA)
-- npm
-- nodejs
-- micro
+- **Chromium**, navegador web.
+- **git**, herramienta de control de versiones.
+- **gh-cli**, cliente oficial de github.
+- **lazygit**, cliente de git en terminal.
+- **micro**, editor de texto en terminal.
+- **tree**, visualizador de estructuras de directorios.
+- **eza**, reemplazo moderno de ls.
+- **fzf**, fuzzy finder en terminal para buscar archivos y comandos.
+- **udiskie**, gestor de discos y unidades extraibles.
+- **tor**, red de anonimato.
+- **torsocks**, ejecutar aplicaciones a través de la red tor.
+- **proxychains**, enrutar conexiones a través de proxies.
+- **nmap**, escáner de redes y puertos.
+- **xclip**, manipulación del portapapeles desde terminal.
+- **curl**, peticiones http desde terminal.
+- **wget**, descargar archivos desde terminal.
+- **yq/jq**, procesadores de archivos yaml y json.
+- **csvkit**, procesador de archivos csv.
+- **httpie**, cliente http en terminal.
+- **docker**, plataforma de contenedores.
+- **docker-compose**, aplicaciones multi-contenedor.
+- **VSCode**, editor de código.
+- **sqlite3**, gestor de bases de datos ligero.
+- **opencode**, agente de IA con control sobre el sistema.
+- **aichat-ng**, cliente de IA en terminal.
+- **ChatGPT (PWA)**, acceso directo a ChatGPT como aplicación.
+- **npm**, gestor de paquetes para JavaScript.
+- **nodejs**, entorno de ejecución para JavaScript.
 
 ## Configuración
 
