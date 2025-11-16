@@ -10,9 +10,13 @@ else
     echo "Snap no está instalado. Se omiten las operaciones de snap."
 fi
 
+code --install-extension hilalh.hyper-dracula-vscode-theme
+
+cp dotfiles/code.settings.json ~/.config/Code/User/settings.json
+
 # Instalación de paquetes para Debian/Ubuntu
 sudo apt update
-sudo apt install -y chromium sqlite3 eza npm nodejs micro
+sudo apt install -y chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit
 
 # Instalar paquetes npm globalmente
 sudo npm i -g opencode-ai@latest live-server

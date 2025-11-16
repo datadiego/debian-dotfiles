@@ -118,3 +118,5 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/dracula.omp.json)"
 alias ls="eza -l"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

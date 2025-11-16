@@ -9,3 +9,5 @@ cp ~/.config/polybar/config.ini ./dotfiles/polybar-config.ini
 cp ~/.bashrc ./dotfiles/bashrc
 
 cp ~/.config/oh-my-posh/dracula.omp.json ./dotfiles/dracula.omp.json
+
+cp ~/.config/Code/User/settings.json ./dotfiles/code.settings.json
