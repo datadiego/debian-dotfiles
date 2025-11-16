@@ -106,7 +106,7 @@ code --install-extension hilalh.hyper-dracula-vscode-theme
 cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 
 # Otros paquetes
-sudo apt install -y xclip chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit tree 
+sudo apt install -y wget xclip chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit tree tor torsocks proxychains nmap
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
@@ -132,6 +132,26 @@ else
 fi
 fc-cache -fv > /dev/null
 rm -rf "$TMP_DIR"
+
+# docker
+sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
 
 # aichat-ng
 curl https://sh.rustup.rs -sSf | sh -s -- -y
