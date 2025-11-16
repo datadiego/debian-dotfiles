@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e  # salir si algo falla
+set -e
 
 # ----------------------------
 # CAPTURAR DIRECTORIO DEL PROYECTO
