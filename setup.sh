@@ -133,4 +133,18 @@ fi
 fc-cache -fv > /dev/null
 rm -rf "$TMP_DIR"
 
+# aichat-ng
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+export PATH="$HOME/.cargo/bin:$PATH"
+grep -qxF 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.bashrc || echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
+TMPDIR=$(mktemp -d)
+git clone https://github.com/blob42/aichat-ng.git "$TMPDIR/aichat-ng"
+cd "$TMPDIR/aichat-ng"
+cargo install --path .
+
+aichatng --version || echo "AIChat-NG instalado, verifica ejecutando: aichatng"
+
+cd "$WORKDIR"
+rm -rf "$TMPDIR"
+
 echo "Instalación completada con éxito."
