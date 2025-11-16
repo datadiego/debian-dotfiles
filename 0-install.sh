@@ -8,6 +8,16 @@ read -p "Introduce tu email para Git: " git_email
 sudo apt update && sudo apt install -y curl build-essential xdotool git meson ninja-build autoconf automake libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxkbcommon-x11-dev libxcb-xinerama0-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm-dev libxcb-shape0-dev pkg-config libxcb-xfixes0-dev libxcb-xinerama0-dev libxcb-xkb-dev xutils-dev libtool && \
 cd /tmp && git clone https://github.com/Airblader/i3 i3-gaps && cd i3-gaps && mkdir -p build && cd build && meson .. && ninja && sudo ninja install
 
+mkdir /usr/local/share/applications
+mkdir /usr/local/share/xsessions
+mkdir /usr/share/applications
+mkdir /usr/share/xsessions
+
+cp dotfiles/i3.desktop /usr/local/share/applications/
+cp dotfiles/i3.desktop /usr/local/share/xsessions/
+cp dotfiles/i3.desktop /usr/share/applications/
+cp dotfiles/i3.desktop /usr/share/xsessions/
+
 # instalar picom
 
 sudo apt install -y picom
