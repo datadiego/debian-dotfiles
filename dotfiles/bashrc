@@ -61,6 +61,7 @@ eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/dracula.omp.json)"
 # alias y funciones
 alias ls="eza -l --icons"
 alias nano="micro"
+alias toclip="xclip -selection clipboard"
 gp() {
     if [ -z "$1" ]; then
         echo "Uso: gp \"mensaje del commit\""

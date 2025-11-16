@@ -128,7 +128,7 @@ cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 # ----------------------------
 # Otros paquetes
 # ----------------------------
-sudo apt install -y chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit tree 
+sudo apt install -y xclip chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit tree 
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
