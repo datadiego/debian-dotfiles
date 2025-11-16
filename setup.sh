@@ -3,13 +3,13 @@
 set -e
 
 # ----------------------------
-# CAPTURAR DIRECTORIO DEL PROYECTO
+# Capturar directorio del proyecto
 # ----------------------------
 WORKDIR="$(cd "$(dirname "$0")" && pwd)"
 echo "Directorio del proyecto: $WORKDIR"
 
 # ----------------------------
-# CONFIG GIT
+# Configurar git
 # ----------------------------
 read -p "Introduce tu nombre para Git: " git_name
 read -p "Introduce tu email para Git: " git_email
@@ -18,7 +18,7 @@ git config --global user.name "$git_name"
 git config --global user.email "$git_email"
 
 # ----------------------------
-# INSTALAR i3-gaps
+# i3-gaps
 # ----------------------------
 sudo apt update
 sudo apt install -y \
@@ -40,7 +40,7 @@ ninja
 sudo ninja install
 
 # ----------------------------
-# OTRAS INSTALACIONES
+# Otras aplicaciones del entorno
 # ----------------------------
 sudo apt install -y picom rofi polybar scrot alacritty
 
@@ -54,7 +54,7 @@ fc-cache -f -v
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
 # ----------------------------
-# CONFIGURAR DIRECTORIOS
+# Directorios de configuraciones
 # ----------------------------
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/polybar
@@ -64,7 +64,7 @@ mkdir -p ~/.local/share/applications
 mkdir -p ~/.config/Code/User
 
 # ----------------------------
-# COPIAR DOTFILES (con WORKDIR)
+# Copiar dotfiles
 # ----------------------------
 cp "$WORKDIR/dotfiles/i3" ~/.config/i3/config
 cp "$WORKDIR/dotfiles/terminal-preserving-working-directory.sh" ~/.config/i3/
@@ -81,14 +81,14 @@ cp "$WORKDIR/dotfiles/dracula.omp.json" ~/.config/oh-my-posh/dracula.omp.json
 cp "$WORKDIR/apps/chatgpt.desktop" ~/.local/share/applications/
 
 # ----------------------------
-# AJUSTES GNOME
+# Ajustes gnome
 # ----------------------------
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'es+nodeadkeys')]"
 gsettings set org.gnome.desktop.input-sources current 0
 
 # ----------------------------
-# GH CLI
+# Instalacion gh-cli
 # ----------------------------
 (type -p wget >/dev/null || sudo apt install -y wget)
 
@@ -107,7 +107,7 @@ sudo apt update
 sudo apt install -y gh
 
 # ----------------------------
-# SNAP (SI EXISTE)
+# Aplicaciones de snap
 # ----------------------------
 if command -v snap &> /dev/null; then
     echo "Snap detectado, ejecutando acciones..."
@@ -117,14 +117,16 @@ else
     echo "Snap NO está instalado, saltando sección."
 fi
 
+# TODO: Instalar vscode desde .deb
+
 # ----------------------------
-# VSCODE SETTINGS
+# Configuracion VScode
 # ----------------------------
 code --install-extension hilalh.hyper-dracula-vscode-theme
 cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 
 # ----------------------------
-# PAQUETES VARIOS
+# Otros paquetes
 # ----------------------------
 sudo apt install -y chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit tree 
 
@@ -132,7 +134,7 @@ sudo apt install -y chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie la
 sudo npm i -g opencode-ai@latest live-server
 
 # ----------------------------
-# FZF
+# Instalacion FZF
 # ----------------------------
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
