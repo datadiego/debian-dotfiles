@@ -7,6 +7,7 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Añadir al .bashrc para futuras sesiones
+# esto sobra si lo tenemos en bashrc ya
 grep -qxF 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.bashrc || echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
 cargo --version
 
