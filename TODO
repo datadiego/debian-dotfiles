@@ -1,3 +1,4 @@
-- Configuracion de rofi
+- Añadir cp de dotfiles de rofi a setup.sh
+- Añadir cp de dotfiles de micro a setup.sh
 - Integrar pywal/wal-generate para generar paletas de colores
 - integrar nwg-look
