@@ -53,10 +53,6 @@ unzip JetBrainsMono.zip -d ~/.local/share/fonts
 fc-cache -f -v
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
-# instalar fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --all
-
 # directorios para configuraciones
 mkdir ~/.config/i3
 mkdir ~/.config/polybar
