@@ -119,5 +119,16 @@ export PATH="$HOME/.local/bin:$PATH"
 eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/dracula.omp.json)"
 alias ls="eza -l --icons"
 alias nano="micro"
+gp() {
+    if [ -z "$1" ]; then
+        echo "Uso: gp \"mensaje del commit\""
+        return 1
+    fi
+
+    git add -A
+    git commit -m "$1"
+    git push
+}
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
