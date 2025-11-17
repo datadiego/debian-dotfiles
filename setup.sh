@@ -34,10 +34,14 @@ ninja
 sudo ninja install
 
 # Otras aplicaciones del entorno
-sudo apt install -y picom rofi polybar scrot alacritty
+sudo apt install -y picom || true
+sudo apt install -y rofi || true
+sudo apt install -y polybar || true
+sudo apt install -y scrot || true
+sudo apt install -y alacritty || true
 
 # Nerd fonts
-sudo apt install -y fonts-firacode
+sudo apt install -y fonts-firacode || true
 wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 unzip -o JetBrainsMono.zip -d ~/.local/share/fonts
 fc-cache -f -v
@@ -88,7 +92,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubc
   | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
 
 sudo apt update
-sudo apt install -y gh
+sudo apt install -y gh || true
 
 # Aplicaciones de snap
 if command -v snap &> /dev/null; then
@@ -106,7 +110,24 @@ code --install-extension hilalh.hyper-dracula-vscode-theme
 cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 
 # Otros paquetes
-sudo apt install -y wget xclip chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit tree tor torsocks proxychains nmap
+sudo apt install -y wget || true
+sudo apt install -y xclip || true
+sudo apt install -y chromium || true
+sudo apt install -y sqlite3 || true
+sudo apt install -y eza || true
+sudo apt install -y npm || true
+sudo apt install -y nodejs || true 
+sudo apt install -y micro || true
+sudo apt install -y yq || true
+sudo apt install -y jq || true
+sudo apt install -y csvkit || true
+sudo apt install -y httpie || true
+sudo apt install -y lazygit || true 
+sudo apt install -y tree || true 
+sudo apt install -y tor || true 
+sudo apt install -y torsocks || true 
+sudo apt install -y proxychains || true 
+sudo apt install -y nmap || true
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
