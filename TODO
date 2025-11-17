@@ -2,3 +2,8 @@
 - Añadir cp de dotfiles de micro a setup.sh
 - Integrar pywal/wal-generate para generar paletas de colores
 - integrar nwg-look
+- añadir check para apt install en paquetes que no estan:
+
+```bash
+sudo apt install paquete || true
+```
