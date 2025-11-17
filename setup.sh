@@ -34,7 +34,11 @@ ninja
 sudo ninja install
 
 # Otras aplicaciones del entorno
-sudo apt install -y picom rofi polybar scrot alacritty 2>> error.log || true
+sudo apt install -y picom 2>> error.log || true
+sudo apt install -y rofi 2>> error.log || true
+sudo apt install -y polybar 2>> error.log || true
+sudo apt install -y scrot 2>> error.log || true
+sudo apt install -y alacritty 2>> error.log || true
 
 # Nerd fonts
 sudo apt install -y fonts-firacode 2>> error.log || true
@@ -106,7 +110,24 @@ code --install-extension hilalh.hyper-dracula-vscode-theme
 cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 
 # Otros paquetes
-sudo apt install -y wget xclip chromium sqlite3 eza npm nodejs micro yq jq csvkit httpie lazygit tree tor torsocks proxychains nmap 2>> error.log || true
+sudo apt install -y wget 2>> error.log || true
+sudo apt install -y xclip 2>> error.log || true
+sudo apt install -y chromium 2>> error.log || true
+sudo apt install -y sqlite3 2>> error.log || true
+sudo apt install -y eza 2>> error.log || true
+sudo apt install -y npm 2>> error.log || true
+sudo apt install -y nodejs 2>> error.log || true
+sudo apt install -y micro 2>> error.log || true
+sudo apt install -y yq 2>> error.log || true
+sudo apt install -y jq 2>> error.log || true
+sudo apt install -y csvkit 2>> error.log || true
+sudo apt install -y httpie 2>> error.log || true
+sudo apt install -y lazygit 2>> error.log || true
+sudo apt install -y tree 2>> error.log || true
+sudo apt install -y tor 2>> error.log || true
+sudo apt install -y torsocks 2>> error.log || true
+sudo apt install -y proxychains 2>> error.log || true
+sudo apt install -y nmap 2>> error.log || true
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
