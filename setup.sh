@@ -97,7 +97,7 @@ sudo apt install -y gh || true
 # Aplicaciones de snap
 if command -v snap &> /dev/null; then
     echo "Snap detectado, ejecutando acciones..."
-    sudo snap remove firefox || true
+    # sudo snap remove firefox || true
     sudo snap install --classic code
 else
     echo "Snap NO está instalado, saltando sección."
@@ -112,7 +112,7 @@ cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 # Otros paquetes
 sudo apt install -y wget || true
 sudo apt install -y xclip || true
-sudo apt install -y chromium || true
+# sudo apt install -y chromium || true
 sudo apt install -y sqlite3 || true
 sudo apt install -y eza || true
 sudo apt install -y npm || true
