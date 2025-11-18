@@ -21,7 +21,7 @@ sudo apt install -y \
   libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev \
   libxkbcommon-dev libxkbcommon-x11-dev libxcb-xinerama0-dev \
   libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm-dev \
-  libxcb-shape0-dev pkg-config libxcb-xfixes0-dev xutils-dev libtool 2>> error.log || true
+  libxcb-shape0-dev pkg-config libxcb-xfixes0-dev xutils-dev libtool || true
 
 cd /tmp
 rm -rf i3-gaps
@@ -34,14 +34,14 @@ ninja
 sudo ninja install
 
 # Otras aplicaciones del entorno
-sudo apt install -y picom 2>> error.log || true
-sudo apt install -y rofi 2>> error.log || true
-sudo apt install -y polybar 2>> error.log || true
-sudo apt install -y scrot 2>> error.log || true
-sudo apt install -y alacritty 2>> error.log || true
+sudo apt install -y picom || true
+sudo apt install -y rofi || true
+sudo apt install -y polybar || true
+sudo apt install -y scrot || true
+sudo apt install -y alacritty || true
 
 # Nerd fonts
-sudo apt install -y fonts-firacode 2>> error.log || true
+sudo apt install -y fonts-firacode || true
 wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 unzip -o JetBrainsMono.zip -d ~/.local/share/fonts
 fc-cache -f -v
@@ -92,7 +92,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubc
   | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
 
 sudo apt update
-sudo apt install -y gh 2>> error.log || true
+sudo apt install -y gh || true
 
 # Aplicaciones de snap
 if command -v snap &> /dev/null; then
@@ -110,24 +110,24 @@ code --install-extension hilalh.hyper-dracula-vscode-theme
 cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 
 # Otros paquetes
-sudo apt install -y wget 2>> error.log || true
-sudo apt install -y xclip 2>> error.log || true
-sudo apt install -y chromium 2>> error.log || true
-sudo apt install -y sqlite3 2>> error.log || true
-sudo apt install -y eza 2>> error.log || true
-sudo apt install -y npm 2>> error.log || true
-sudo apt install -y nodejs 2>> error.log || true
-sudo apt install -y micro 2>> error.log || true
-sudo apt install -y yq 2>> error.log || true
-sudo apt install -y jq 2>> error.log || true
-sudo apt install -y csvkit 2>> error.log || true
-sudo apt install -y httpie 2>> error.log || true
-sudo apt install -y lazygit 2>> error.log || true
-sudo apt install -y tree 2>> error.log || true
-sudo apt install -y tor 2>> error.log || true
-sudo apt install -y torsocks 2>> error.log || true
-sudo apt install -y proxychains 2>> error.log || true
-sudo apt install -y nmap 2>> error.log || true
+sudo apt install -y wget || true
+sudo apt install -y xclip || true
+sudo apt install -y chromium || true
+sudo apt install -y sqlite3 || true
+sudo apt install -y eza || true
+sudo apt install -y npm || true
+sudo apt install -y nodejs || true
+sudo apt install -y micro || true
+sudo apt install -y yq || true
+sudo apt install -y jq || true
+sudo apt install -y csvkit || true
+sudo apt install -y httpie || true
+sudo apt install -y lazygit || true
+sudo apt install -y tree || true
+sudo apt install -y tor || true
+sudo apt install -y torsocks || true
+sudo apt install -y proxychains || true
+sudo apt install -y nmap || true
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
@@ -157,7 +157,7 @@ rm -rf "$TMP_DIR"
 # docker
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
 sudo apt update
-sudo apt install -y ca-certificates curl 2>> error.log || true
+sudo apt install -y ca-certificates curl || true
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -171,7 +171,7 @@ Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
 sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin 2>> error.log || true
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin || true
 
 
 # aichat-ng
