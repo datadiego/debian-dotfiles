@@ -128,6 +128,7 @@ sudo apt install -y tor || true
 sudo apt install -y torsocks || true
 sudo apt install -y proxychains || true
 sudo apt install -y nmap || true
+sudo apt install -y arandr || true
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
