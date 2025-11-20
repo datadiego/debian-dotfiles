@@ -112,6 +112,7 @@ cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 # Otros paquetes
 sudo apt install -y wget || true
 sudo apt install -y xclip || true
+sudo apt install -y htop || true
 # sudo apt install -y chromium || true
 sudo apt install -y sqlite3 || true
 sudo apt install -y eza || true
