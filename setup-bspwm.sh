@@ -12,25 +12,9 @@ read -p "Introduce tu email para Git: " git_email
 git config --global user.name "$git_name"
 git config --global user.email "$git_email"
 
-# i3-gaps
 sudo apt update
-sudo apt install -y \
-  curl build-essential xdotool git meson ninja-build autoconf automake \
-  libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev \
-  libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev \
-  libxkbcommon-dev libxkbcommon-x11-dev libxcb-xinerama0-dev \
-  libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm-dev \
-  libxcb-shape0-dev pkg-config libxcb-xfixes0-dev xutils-dev libtool || true
+sudo apt install curl bspwm sxhkd git unzip -y || true
 
-cd /tmp
-rm -rf i3-gaps
-git clone https://github.com/Airblader/i3 i3-gaps
-cd i3-gaps
-mkdir -p build
-cd build
-meson ..
-ninja
-sudo ninja install
 
 # Otras aplicaciones del entorno
 sudo apt install -y picom || true
@@ -49,17 +33,15 @@ fc-cache -f -v
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
 # Directorios de configuraciones
-mkdir -p ~/.config/i3
 mkdir -p ~/.config/polybar
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/oh-my-posh
 mkdir -p ~/.local/share/applications
 mkdir -p ~/.config/Code/User
+mkdir -p ~/.config/bspwm
+mkdir -p ~/.config/sxhkd
 
 # Copiar dotfiles
-cp "$WORKDIR/dotfiles/i3" ~/.config/i3/config
-cp "$WORKDIR/dotfiles/terminal-preserving-working-directory.sh" ~/.config/i3/
-cp "$WORKDIR/dotfiles/keybindings.conf" ~/.config/i3/
 
 cp "$WORKDIR/dotfiles/alacritty.toml" ~/.config/alacritty/
 
@@ -70,6 +52,12 @@ cp "$WORKDIR/dotfiles/bashrc" ~/.bashrc
 cp "$WORKDIR/dotfiles/dracula.omp.json" ~/.config/oh-my-posh/dracula.omp.json
 
 cp "$WORKDIR/apps/chatgpt.desktop" ~/.local/share/applications/
+
+cp "$WORKDIR/dotfiles/bspwmrc" ~/.config/bspwm/bspwmrc
+chmod +x ~/.config/bspwm/bspwmrc
+
+cp "$WORKDIR/dotfiles/sxhkdrc" ~/.config/sxhkd/sxhkdrc
+chmod +x ~/.config/sxhkd/sxhkdrc
 
 # Ajustes gnome
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
@@ -109,45 +97,25 @@ code --install-extension hilalh.hyper-dracula-vscode-theme
 cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 
 # Otros paquetes
-sudo apt install -y wget || true
-sudo apt install -y xclip || true
-sudo apt install -y htop || true
-sudo apt install -y chromium || true
-sudo apt install -y sqlite3 || true
-sudo apt install -y eza || true
-sudo apt install -y npm || true
-sudo apt install -y nodejs || true
-sudo apt install -y micro || true
-sudo apt install -y yq || true
-sudo apt install -y jq || true
-sudo apt install -y csvkit || true
-sudo apt install -y httpie || true
-sudo apt install -y lazygit || true
-sudo apt install -y tree || true
-sudo apt install -y tor || true
-sudo apt install -y torsocks || true
-sudo apt install -y proxychains || true
-sudo apt install -y nmap || true
-sudo apt install -y arandr || true
 set +e
-sudo apt-get install -y wget || true
-sudo apt-get install -y xclip || true
-sudo apt-get install -y chromium || true
-sudo apt-get install -y sqlite3 || true
-sudo apt-get install -y eza || true
-sudo apt-get install -y npm || true
-sudo apt-get install -y nodejs || true
-sudo apt-get install -y micro || true
-sudo apt-get install -y yq || true
-sudo apt-get install -y jq || true
-sudo apt-get install -y csvkit || true
-sudo apt-get install -y httpie || true
-sudo apt-get install -y lazygit || true
-sudo apt-get install -y tree || true
-sudo apt-get install -y tor || true
-sudo apt-get install -y torsocks || true
-sudo apt-get install -y proxychains || true
-sudo apt-get install -y nmap || true
+sudo apt-get install -y wget &>> error.log || true
+sudo apt-get install -y xclip &>> error.log || true
+sudo apt-get install -y chromium &>> error.log || true
+sudo apt-get install -y sqlite3 &>> error.log || true
+sudo apt-get install -y eza &>> error.log || true
+sudo apt-get install -y npm &>> error.log || true
+sudo apt-get install -y nodejs &>> error.log || true
+sudo apt-get install -y micro &>> error.log || true
+sudo apt-get install -y yq &>> error.log || true
+sudo apt-get install -y jq &>> error.log || true
+sudo apt-get install -y csvkit &>> error.log || true
+sudo apt-get install -y httpie &>> error.log || true
+sudo apt-get install -y lazygit &>> error.log || true
+sudo apt-get install -y tree &>> error.log || true
+sudo apt-get install -y tor &>> error.log || true
+sudo apt-get install -y torsocks &>> error.log || true
+sudo apt-get install -y proxychains &>> error.log || true
+sudo apt-get install -y nmap &>> error.log || true
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
