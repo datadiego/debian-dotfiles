@@ -97,25 +97,24 @@ code --install-extension hilalh.hyper-dracula-vscode-theme
 cp "$WORKDIR/dotfiles/code.settings.json" ~/.config/Code/User/settings.json
 
 # Otros paquetes
-set +e
-sudo apt-get install -y wget &>> error.log || true
-sudo apt-get install -y xclip &>> error.log || true
-sudo apt-get install -y chromium &>> error.log || true
-sudo apt-get install -y sqlite3 &>> error.log || true
-sudo apt-get install -y eza &>> error.log || true
-sudo apt-get install -y npm &>> error.log || true
-sudo apt-get install -y nodejs &>> error.log || true
-sudo apt-get install -y micro &>> error.log || true
-sudo apt-get install -y yq &>> error.log || true
-sudo apt-get install -y jq &>> error.log || true
-sudo apt-get install -y csvkit &>> error.log || true
-sudo apt-get install -y httpie &>> error.log || true
-sudo apt-get install -y lazygit &>> error.log || true
-sudo apt-get install -y tree &>> error.log || true
-sudo apt-get install -y tor &>> error.log || true
-sudo apt-get install -y torsocks &>> error.log || true
-sudo apt-get install -y proxychains &>> error.log || true
-sudo apt-get install -y nmap &>> error.log || true
+sudo apt-get install -y wget || true
+sudo apt-get install -y xclip || true
+sudo apt-get install -y chromium || true
+sudo apt-get install -y sqlite3 || true
+sudo apt-get install -y eza || true
+sudo apt-get install -y npm || true
+sudo apt-get install -y nodejs || true
+sudo apt-get install -y micro || true
+sudo apt-get install -y yq || true
+sudo apt-get install -y jq || true
+sudo apt-get install -y csvkit || true
+sudo apt-get install -y httpie || true
+sudo apt-get install -y lazygit || true
+sudo apt-get install -y tree || true
+sudo apt-get install -y tor || true
+sudo apt-get install -y torsocks || true
+sudo apt-get install -y proxychains || true
+sudo apt-get install -y nmap || true
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
