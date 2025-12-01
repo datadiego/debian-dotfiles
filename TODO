@@ -1,9 +1,9 @@
+Must:
+- Añadir menu de keybindings
 - Añadir cp de dotfiles de rofi a setup.sh
 - Añadir cp de dotfiles de micro a setup.sh
+
+Quiza:
+
 - Integrar pywal/wal-generate para generar paletas de colores
 - integrar nwg-look
-- añadir check para apt install en paquetes que no estan:
-
-```bash
-sudo apt install paquete || true
-```
