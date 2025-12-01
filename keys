@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Archivo de atajos (puedes editarlo)
+KEYS="
+  ATAJOS BSPWM (Esc para salir)
+
+Básicos:
+  Super + Return       Abrir terminal
+  Super + w            Cerrar ventana
+  Super + shift + e    Cerrar sesión
+  Super + r            Recargar sxhkd
+  Super + numero       Mover entre escritorios
+
+Aplicaciones:
+  Super + d            Menu de aplicaciones
+  Super + b            Navegador
+  Super + a            ChatGPT
+"
+
+# Muestra con rofi si está disponible, sino usa dmenu.
+if command -v rofi >/dev/null; then
+    rofi -e "$KEYS"
+else
+    printf "%s\n" "$KEYS" | dmenu -l 20
+fi
