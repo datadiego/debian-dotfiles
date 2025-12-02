@@ -42,6 +42,7 @@ mkdir -p ~/.config/Code/User
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
 mkdir -p ~/.config/wallpapers
+mkdir -p ~/.config/picom
 
 # Copiar dotfiles
 
