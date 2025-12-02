@@ -56,7 +56,9 @@ eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/dracula.omp.json)"
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
+
+# rust
+# . "$HOME/.cargo/env"
 
 # alias y funciones
 alias ls="eza -l --icons"
