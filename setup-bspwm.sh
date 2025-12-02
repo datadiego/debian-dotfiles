@@ -59,6 +59,9 @@ chmod +x ~/.config/bspwm/bspwmrc
 cp "$WORKDIR/dotfiles/sxhkdrc" ~/.config/sxhkd/sxhkdrc
 chmod +x ~/.config/sxhkd/sxhkdrc
 
+cp "$WORKDIR/apps/keys" ~/.local/bin/helpkeys
+chmod +x ~/.local/bin/helpkeys
+
 # Ajustes gnome
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'es+nodeadkeys')]"
