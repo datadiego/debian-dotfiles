@@ -77,12 +77,16 @@ super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 #
-# Intercambio
+# Intercambio y escritorios
 #
 
 # Mover el nodo en la dirección indicada
 super + shift + {Left,Down,Up,Right}
 	bspc node -s {west,south,north,east}
+
+# Cambiar al escritorio indicado
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
 
 # Enviar ventana al escritorio indicado
 super + shift + {1-9,0}
