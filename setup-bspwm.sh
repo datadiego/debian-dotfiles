@@ -126,9 +126,9 @@ sudo apt install -y ./discord.deb || true
 rm discord.deb
 
 # Netbeans
-wget https://www.apache.org/dyn/closer.lua/netbeans/netbeans/28/netbeans-28-bin.zip?action=download -O netbeans.zip
-unzip -q netbeans.zip -d "$HOME/Applications/"
-rm netbeans.zip
+# wget https://www.apache.org/dyn/closer.lua/netbeans/netbeans/28/netbeans-28-bin.zip?action=download -O netbeans.zip
+# unzip -q netbeans.zip -d "$HOME/Applications/"
+# rm netbeans.zip
 
 # zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
@@ -160,18 +160,18 @@ rm -rf "$TMP_DIR"
 
 
 # aichat-ng
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-export PATH="$HOME/.cargo/bin:$PATH"
-grep -qxF 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.bashrc || echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
-TMPDIR=$(mktemp -d)
-git clone https://github.com/blob42/aichat-ng.git "$TMPDIR/aichat-ng"
-cd "$TMPDIR/aichat-ng"
-cargo install --path .
+# curl https://sh.rustup.rs -sSf | sh -s -- -y
+# export PATH="$HOME/.cargo/bin:$PATH"
+# grep -qxF 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.bashrc || echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
+# TMPDIR=$(mktemp -d)
+# git clone https://github.com/blob42/aichat-ng.git "$TMPDIR/aichat-ng"
+# cd "$TMPDIR/aichat-ng"
+# cargo install --path .
 
-aichatng --version || echo "AIChat-NG instalado, verifica ejecutando: aichatng"
+# aichatng --version || echo "AIChat-NG instalado, verifica ejecutando: aichatng"
 
-cd "$WORKDIR"
-rm -rf "$TMPDIR"
+# cd "$WORKDIR"
+# rm -rf "$TMPDIR"
 
 # docker
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
