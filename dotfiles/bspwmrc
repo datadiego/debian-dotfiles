@@ -5,6 +5,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Launch polybar
 polybar example &
 
+feh --bg-fill ~/Imágenes/wallpaper.jpg &
+
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
@@ -17,3 +19,8 @@ bspc config pointer_follows_focus false
 bspc config focus_follows_pointer true
 
 bspc rule -a Screenkey manage=off
+
+pgrep -x picom > /dev/null || picom &
+
+# picom --experimental-backends --config ~/.config/picom/picom.conf &
+

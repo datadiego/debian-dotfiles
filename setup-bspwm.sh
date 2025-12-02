@@ -18,6 +18,7 @@ sudo apt install curl bspwm sxhkd git unzip -y || true
 
 # Otras aplicaciones del entorno
 sudo apt install -y picom || true
+sudo apt install -y feh || true
 sudo apt install -y rofi || true
 sudo apt install -y polybar || true
 sudo apt install -y scrot || true
@@ -40,6 +41,7 @@ mkdir -p ~/.local/share/applications
 mkdir -p ~/.config/Code/User
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
+mkdir ~/.config/wallpapers
 
 # Copiar dotfiles
 
@@ -61,6 +63,10 @@ chmod +x ~/.config/sxhkd/sxhkdrc
 
 cp "$WORKDIR/apps/keys" ~/.local/bin/helpkeys
 chmod +x ~/.local/bin/helpkeys
+
+cp "$WORKDIR/imgs/wallpaper.jpg" "~/.config/wallpapers/wallpaper.jpg"
+
+cp "$WORKDIR/dotfiles/picom.conf" ~/.config/picom/picom.conf
 
 # Ajustes gnome
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
