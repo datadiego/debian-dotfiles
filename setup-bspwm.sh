@@ -86,6 +86,7 @@ if command -v snap &> /dev/null; then
     echo "Snap detectado, ejecutando acciones..."
     sudo snap remove firefox || true
     sudo snap install --classic code
+    sudo snap install netbeans --classic
 else
     echo "Snap NO está instalado, saltando sección."
 fi
@@ -115,6 +116,10 @@ sudo apt-get install -y tor || true
 sudo apt-get install -y torsocks || true
 sudo apt-get install -y proxychains || true
 sudo apt-get install -y nmap || true
+sudo apt-get install -y arandr || true
+
+# zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 # Paquetes npm globales
 sudo npm i -g opencode-ai@latest live-server
