@@ -41,7 +41,7 @@ mkdir -p ~/.local/share/applications
 mkdir -p ~/.config/Code/User
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
-mkdir ~/.config/wallpapers
+mkdir -p ~/.config/wallpapers
 
 # Copiar dotfiles
 
@@ -64,7 +64,7 @@ chmod +x ~/.config/sxhkd/sxhkdrc
 cp "$WORKDIR/apps/keys" ~/.local/bin/helpkeys
 chmod +x ~/.local/bin/helpkeys
 
-cp "$WORKDIR/imgs/wallpaper.jpg" "~/.config/wallpapers/wallpaper.jpg"
+cp "$WORKDIR/imgs/wallpaper.jpg" ~/.config/wallpapers/wallpaper.jpg
 
 cp "$WORKDIR/dotfiles/picom.conf" ~/.config/picom/picom.conf
 
