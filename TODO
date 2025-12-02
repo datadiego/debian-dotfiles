@@ -1,11 +1,9 @@
 Must:
-- Instalar arandr
 - Añadir cp de dotfiles de rofi a setup.sh
 - Añadir cp de dotfiles de micro a setup.sh
 - Instalar OBS
-- Configurar tema de micro
-- Configurar rofi
-- Añadir ayuda para keybindings
+- Actualizar keybindings de bspwm/sxhkd para añadir helpkeys
+- Actualizar sxhkdrc para mover ventanas con super+shift+flechas
 
 Quiza:
 - Integrar pywal/wal-generate para generar paletas de colores
