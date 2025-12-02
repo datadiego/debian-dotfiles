@@ -119,6 +119,8 @@ sudo apt-get install -y torsocks || true
 sudo apt-get install -y proxychains || true
 sudo apt-get install -y nmap || true
 sudo apt-get install -y arandr || true
+sudo apt-get install -y screenkey || true
+sudo apt-get install -y flameshot || true
 
 # Discord
 wget https://discord.com/api/download?platform=linux -O discord.deb
