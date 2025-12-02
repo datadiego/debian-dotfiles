@@ -1,23 +1,23 @@
 #
-# wm independent hotkeys
+# Atajos independientes del WM
 #
 
-# terminal emulator
+# Terminal
 super + Return
 	alacritty
 
-# program launcher
+# launcher de aplicaciones
 super + d
 	rofi -modi drun,run -show drun
 
-# Launch applications
+# Aplicaciones con shortcuts
 super + a
 	gtk-launch chatgpt
 
 super + b
 	chromium
 
-# make sxhkd reload its configuration files:
+# Recargar configuración de sxhkd
 super + Escape
 	pkill -USR1 -x sxhkd
 
@@ -31,116 +31,75 @@ shift + Print
 super + p
 	scrot ~/Imágenes/screenshot_%Y-%m-%d-%H%M%S.png
 
-# Restart polybar
+# Recargar polybar
 super + shift + p
 	killall polybar && polybar example &
 
 #
-# bspwm hotkeys
+# Atajos de bspwm
 #
 
-# quit/restart bspwm
+# Salir o reiniciar bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
-# exit bspwm (logout)
+# Logout de bspwm
 super + shift + e
 	bspc quit
 
-# close and kill
+# Cerrar y matar ventanas
 super + {_,shift + }w
 	bspc node -{c,k}
 
-# alternate between the tiled and monocle layout
+# Cambiar entre los modos de distribución de ventanas
 super + m
 	bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest window
+# Intercambiar nodo actual con la ventana más grande
 super + g
 	bspc node -s biggest.window
 
 #
-# state/flags
+# Estado y banderas
 #
 
-# set the window state
+# Establecer el estado de la ventana
+# tiled: ventanas en mosaico
+# pseudo_tiled: ventana en mosaico pero puede ser redimensionada
+# floating: ventana flotante
+# fullscreen: ventana en pantalla completa
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# set the node flags
+# Establecer las banderas del nodo
+# TODO: Atajo para sticky y eliminar el resto
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 #
-# focus/swap
+# Intercambio
 #
 
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+# Mover el nodo en la dirección indicada
+super + shift + {Left,Down,Up,Right}
+	bspc node -s {west,south,north,east}
 
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
-
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
-
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
-
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# Enviar ventana al escritorio indicado
+super + shift + {1-9,0}
+	bspc node -d '^{1-9,10}'
 
 #
-# preselect
+# Mover y redimensionar
 #
 
-# preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
-#
-# move/resize
-#
-
-# expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
+# Expandir una ventana moviendo uno de sus lados hacia afuera
+super + alt + {Left,Down,Up,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
+# Contraer una ventana moviendo uno de sus lados hacia adentro
+super + alt + shift + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-# move a floating window
+# Mover una ventana flotante
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
