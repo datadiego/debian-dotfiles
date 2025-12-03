@@ -21,6 +21,7 @@ sudo apt install -y feh || true
 sudo apt install -y rofi || true
 sudo apt install -y polybar || true
 sudo apt install -y alacritty || true
+sudo apt install -y bpytop || true
 
 # Nerd fonts
 sudo apt install -y fonts-firacode || true
