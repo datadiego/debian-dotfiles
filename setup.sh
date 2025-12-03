@@ -20,7 +20,6 @@ sudo apt install -y picom || true
 sudo apt install -y feh || true
 sudo apt install -y rofi || true
 sudo apt install -y polybar || true
-sudo apt install -y scrot || true
 sudo apt install -y alacritty || true
 
 # Nerd fonts

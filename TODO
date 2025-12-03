@@ -1,9 +1,12 @@
+En proceso:
+- Actualizar keybindings de bspwm/sxhkd para añadir helpkeys
+- Integrar zoxide
+
 Must:
 - Añadir tema dracula a micro
 - Añadir tema dracula a gtk
 - Añadir cp de dotfiles de rofi a setup.sh
 - Instalar OBS
-- Actualizar keybindings de bspwm/sxhkd para añadir helpkeys
 
 Quiza:
 - Integrar pywal/wal-generate para generar paletas de colores
