@@ -23,13 +23,7 @@ super + Escape
 
 # Screenshots
 Print
-	scrot ~/Imágenes/screenshot_%Y-%m-%d-%H%M%S.png
-
-shift + Print
-	scrot -s ~/Imágenes/screenshot_%Y-%m-%d-%H%M%S.png
-
-super + p
-	scrot ~/Imágenes/screenshot_%Y-%m-%d-%H%M%S.png
+	flameshot gui
 
 # Recargar polybar
 super + shift + p
