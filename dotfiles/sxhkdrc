@@ -25,6 +25,9 @@ super + Escape
 Print
 	flameshot gui
 
+super + p
+	flameshot gui
+
 # Recargar polybar
 super + shift + p
 	killall polybar && polybar example &
