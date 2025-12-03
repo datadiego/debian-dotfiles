@@ -3,7 +3,6 @@
 set -e
 
 WORKDIR="$(cd "$(dirname "$0")" && pwd)"
-echo "Directorio del proyecto: $WORKDIR"
 
 # Configurar git
 read -p "Introduce tu nombre para Git: " git_name
