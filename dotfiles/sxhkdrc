@@ -33,6 +33,34 @@ super + shift + p
 	killall polybar && polybar example &
 
 #
+# Teclas de función (multimedia y brillo)
+#
+
+# F1: Mute/Unmute audio
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# F2: Bajar volumen
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# F3: Subir volumen
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# F4: Mute/Unmute micrófono
+XF86AudioMicMute
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# F5: Bajar brillo
+XF86MonBrightnessDown
+	brightnessctl -d intel_backlight set 5%-
+
+# F6: Subir brillo
+XF86MonBrightnessUp
+	brightnessctl -d intel_backlight set +5%
+
+#
 # Atajos de bspwm
 #
 

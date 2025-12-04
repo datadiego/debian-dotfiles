@@ -22,6 +22,8 @@ sudo apt install -y rofi || true
 sudo apt install -y polybar || true
 sudo apt install -y alacritty || true
 sudo apt install -y bpytop || true
+sudo apt install -y brightnessctl || true
+sudo apt install -y pulseaudio-utils || true
 
 # Nerd fonts
 sudo apt install -y fonts-firacode || true
