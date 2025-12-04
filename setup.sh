@@ -58,6 +58,9 @@ cp "$WORKDIR/apps/chatgpt.desktop" ~/.local/share/applications/
 cp "$WORKDIR/dotfiles/bspwmrc" ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/bspwm/bspwmrc
 
+cp "$WORKDIR/dotfiles/bspwm-resize.sh" ~/.config/bspwm/bspwm-resize.sh
+chmod +x ~/.config/bspwm/bspwm-resize.sh
+
 cp "$WORKDIR/dotfiles/sxhkdrc" ~/.config/sxhkd/sxhkdrc
 chmod +x ~/.config/sxhkd/sxhkdrc
 
