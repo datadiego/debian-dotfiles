@@ -130,6 +130,8 @@ sudo apt-get install -y nmap || true
 sudo apt-get install -y arandr || true
 sudo apt-get install -y screenkey || true
 sudo apt-get install -y flameshot || true
+sudo apt-get install -y ffmpeg || true
+sudo apt-get install -y mitmproxy || true
 
 # Discord
 wget https://discord.com/api/download?platform=linux -O discord.deb
