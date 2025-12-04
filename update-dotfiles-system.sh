@@ -19,6 +19,9 @@ echo "Actualizando configuración de VS Code en sistema..."
 cp ./dotfiles/code.settings.json ~/.config/Code/User/settings.json
 echo "Actualizando dotfile de BSPWM en sistema..."
 cp ./dotfiles/bspwmrc ~/.config/bspwm/bspwmrc
+echo "Actualizando script de resize de BSPWM en sistema..."
+cp ./dotfiles/bspwm-resize.sh ~/.config/bspwm/bspwm-resize.sh
+chmod +x ~/.config/bspwm/bspwm-resize.sh
 echo "Actualizando dotfile de SXHKD en sistema..."
 cp ./dotfiles/sxhkdrc ~/.config/sxhkd/sxhkdrc
 echo "Actualizando dotfile de Picom en sistema..."
