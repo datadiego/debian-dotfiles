@@ -133,6 +133,11 @@ sudo apt-get install -y flameshot || true
 sudo apt-get install -y ffmpeg || true
 sudo apt-get install -y mitmproxy || true
 
+# configuraciones aplicaciones
+mkdir -p ~/.config/micro/
+mkdir -p ~.config/micro/colorschemes
+cp "$WORKDIR/dotfiles/dracula.micro" ~/.config/micro/colorschemes/dracula.micro
+
 # Discord
 wget https://discord.com/api/download?platform=linux -O discord.deb
 sudo apt install -y ./discord.deb || true
