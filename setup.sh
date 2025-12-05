@@ -140,6 +140,7 @@ sudo apt-get install -y screenkey || true
 sudo apt-get install -y flameshot || true
 sudo apt-get install -y ffmpeg || true
 sudo apt-get install -y mitmproxy || true
+sudo apt-get install -y pandoc || true
 
 # configuraciones aplicaciones
 mkdir -p ~/.config/micro/
