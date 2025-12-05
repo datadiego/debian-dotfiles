@@ -73,6 +73,12 @@ cp "$WORKDIR/imgs/wallpaper.jpg" ~/.config/wallpapers/wallpaper.jpg
 
 cp "$WORKDIR/dotfiles/picom.conf" ~/.config/picom/picom.conf
 
+# Configurar permisos de brillo (backlight)
+echo 'ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"' | sudo tee /etc/udev/rules.d/backlight.rules > /dev/null
+sudo usermod -aG video $USER
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
 # Ajustes gnome
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'es+nodeadkeys')]"
@@ -137,7 +143,7 @@ sudo apt-get install -y mitmproxy || true
 
 # configuraciones aplicaciones
 mkdir -p ~/.config/micro/
-mkdir -p ~.config/micro/colorschemes
+mkdir -p ~/.config/micro/colorschemes
 cp "$WORKDIR/dotfiles/dracula.micro" ~/.config/micro/colorschemes/dracula.micro
 
 # Discord
