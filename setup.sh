@@ -182,13 +182,15 @@ sudo apt-get install -y tree || true
 sudo apt-get install -y tor || true
 sudo apt-get install -y torsocks || true
 sudo apt-get install -y proxychains || true
+sudo apt-get install -y mitmproxy || true
 sudo apt-get install -y nmap || true
+sudo apt-get install -y net-tools || true
 sudo apt-get install -y arandr || true
 sudo apt-get install -y screenkey || true
 sudo apt-get install -y flameshot || true
 sudo apt-get install -y ffmpeg || true
-sudo apt-get install -y mitmproxy || true
 sudo apt-get install -y pandoc || true
+sudo apt-get install -y vlc || true
 
 # configuraciones aplicaciones
 mkdir -p ~/.config/micro/
