@@ -62,7 +62,7 @@ eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/dracula.omp.json)"
 
 # alias y funciones
 alias ls="eza -l --icons"
-alias nano="micro -colorscheme dracula"
+alias nano="micro -colorscheme dracula-tc"
 alias toclip="xclip -selection clipboard"
 gp() {
     if [ -z "$1" ]; then
