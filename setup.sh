@@ -24,6 +24,7 @@ sudo apt install -y alacritty || true
 sudo apt install -y bpytop || true
 sudo apt install -y brightnessctl || true
 sudo apt install -y pulseaudio-utils || true
+sudo apt install -y xsettingsd || true
 
 # Nerd fonts
 sudo apt install -y fonts-firacode || true
@@ -72,6 +73,53 @@ chmod +x ~/.local/bin/helpkeys
 cp "$WORKDIR/imgs/wallpaper.jpg" ~/.config/wallpapers/wallpaper.jpg
 
 cp "$WORKDIR/dotfiles/picom.conf" ~/.config/picom/picom.conf
+
+cp "$WORKDIR/dotfiles/xsettingsd" ~/.xsettingsd
+
+# Instalar tema Dracula GTK
+echo "Instalando tema Dracula GTK..."
+mkdir -p ~/.themes
+cp -r "$WORKDIR/dotfiles/gtk-dracula" ~/.themes/Dracula
+
+# Configurar GTK4 para soporte de libadwaita
+mkdir -p ~/.config/gtk-4.0
+cp ~/.themes/Dracula/gtk-4.0/gtk.css ~/.config/gtk-4.0/
+cp ~/.themes/Dracula/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/
+cp -r ~/.themes/Dracula/gtk-4.0/assets ~/.config/gtk-4.0/ 2>/dev/null || true
+
+# Activar tema Dracula
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+
+# Instalar Papirus (tema base para Dracula icons)
+sudo apt install -y papirus-icon-theme || true
+
+# Instalar iconos Dracula
+echo "Instalando iconos Dracula..."
+ICON_TMP=$(mktemp -d)
+wget -q https://github.com/dracula/gtk/files/5214870/Dracula.zip -O "$ICON_TMP/dracula-icons.zip"
+unzip -q "$ICON_TMP/dracula-icons.zip" -d "$ICON_TMP"
+mkdir -p ~/.icons
+mv "$ICON_TMP/Dracula" ~/.icons/
+rm -rf "$ICON_TMP"
+gsettings set org.gnome.desktop.interface icon-theme "Dracula"
+
+# Configurar tema e iconos para GTK2/GTK3 (compatible con BSPWM)
+# cat > ~/.gtkrc-2.0 << 'GTKEOF'
+# gtk-theme-name="Dracula"
+# gtk-icon-theme-name="Dracula"
+# gtk-font-name="Sans 10"
+# gtk-cursor-theme-name="Adwaita"
+# GTKEOF
+
+# mkdir -p ~/.config/gtk-3.0
+# cat > ~/.config/gtk-3.0/settings.ini << 'GTKEOF'
+# [Settings]
+# gtk-theme-name=Dracula
+# gtk-icon-theme-name=Dracula
+# gtk-font-name=Sans 10
+# gtk-cursor-theme-name=Adwaita
+# GTKEOF
 
 # Configurar permisos de brillo (backlight)
 echo 'ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"' | sudo tee /etc/udev/rules.d/backlight.rules > /dev/null

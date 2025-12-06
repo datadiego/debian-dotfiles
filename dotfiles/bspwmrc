@@ -24,3 +24,6 @@ pgrep -x picom > /dev/null || picom &
 
 # picom --experimental-backends --config ~/.config/picom/picom.conf &
 
+# xsettingsd para aplicar temas GTK en BSPWM
+pgrep -x xsettingsd > /dev/null || xsettingsd &
+
