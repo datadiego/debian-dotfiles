@@ -185,6 +185,8 @@ sudo apt-get install -y proxychains || true
 sudo apt-get install -y mitmproxy || true
 sudo apt-get install -y nmap || true
 sudo apt-get install -y net-tools || true
+sudo apt-get install -y tcpdump || true
+sudo apt-get install -y wireshark || true
 sudo apt-get install -y arandr || true
 sudo apt-get install -y screenkey || true
 sudo apt-get install -y flameshot || true
