@@ -193,6 +193,8 @@ sudo apt-get install -y flameshot || true
 sudo apt-get install -y ffmpeg || true
 sudo apt-get install -y pandoc || true
 sudo apt-get install -y vlc || true
+sudo apt-get install -y remmina || true
+sudo apt-get install -y remmina-plugin-vnc || true
 
 # configuraciones aplicaciones
 mkdir -p ~/.config/micro/
