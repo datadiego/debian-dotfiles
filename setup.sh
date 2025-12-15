@@ -279,3 +279,4 @@ sudo apt update
 sudo apt install -y obs-studio || true
 
 echo "Instalación completada con éxito."
+xsetroot -cursor_name left_ptr

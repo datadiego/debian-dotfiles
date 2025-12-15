@@ -65,6 +65,7 @@ alias ls="eza -l --icons"
 alias nano="micro -colorscheme dracula-tc"
 alias toclip="xclip -selection clipboard"
 alias cd="z"
+alias netscan="nmap -T5 --min-parallelism=50 -n --min-rate=300"
 gp() {
     if [ -z "$1" ]; then
         echo "Uso: gp \"mensaje del commit\""
@@ -76,3 +77,4 @@ gp() {
     git push
 }
 echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
+export XCURSOR_THEME="Dracula"

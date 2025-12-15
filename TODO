@@ -1,6 +1,7 @@
 En proceso:
 - Actualizar keybindings de bspwm/sxhkd para añadir helpkeys
 - Integrar zoxide
+- Añadir .inputrc al script
 
 Must:
 - Añadir cp de dotfiles de rofi a setup.sh
