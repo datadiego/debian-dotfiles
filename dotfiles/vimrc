@@ -1,0 +1,52 @@
+set nocompatible
+filetype plugin on
+syntax on
+
+" colores
+syntax on
+set termguicolors
+colorscheme evangelion
+
+" Lightline
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ }
+
+" interfaz
+set number
+set relativenumber
+set cursorline
+"set showcmd
+"set wildmenu
+
+" indentación
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+" búsqueda
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" splits
+set splitbelow
+set splitright
+
+
+" clipboard del sistema
+set clipboard=unnamedplus
+
+" scrolling cómodo
+set scrolloff=8
+
+" explorador de archivos
+nnoremap <leader>e :Ex<CR>
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
